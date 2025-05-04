@@ -21,27 +21,63 @@ The application strictly follows Clean Architecture, separating concerns into Do
 ## Project Structure
 
 ```
-src/main/java/com/example/usermanagement/
-├── domain/
-│   ├── User.java
-│   └── Role.java
-├── application/
-│   ├── UserService.java
-│   ├── RoleService.java
-│   └── interfaces/
-│       ├── UserRepository.java
-│       └── RoleRepository.java
-├── infrastructure/
-│   ├── controller/
-│   │   ├── UserController.java
-│   │   └── RoleController.java
-│   └── persistence/
-│       ├── UserJpaEntity.java
-│       ├── RoleJpaEntity.java
-│       ├── UserJpaRepository.java
-│       └── RoleJpaRepository.java
-└── config/
-    └── BeanConfig.java
+src/
+├── main/
+│   ├── java/
+│   │   └── com/
+│   │       └── example/
+│   │           └── usermanagement/
+│   │               ├── domain/
+│   │               │   ├── User.java
+│   │               │   └── Role.java
+│   │               ├── application/
+│   │               │   ├── service/
+│   │               │   │   ├── UserService.java
+│   │               │   │   └── RoleService.java
+│   │               │   └── port/
+│   │               │       ├── UserRepository.java
+│   │               │       └── RoleRepository.java
+│   │               ├── infrastructure/
+│   │               │   ├── controller/
+│   │               │   │   ├── UserController.java
+│   │               │   │   ├── RoleController.java
+│   │               │   │   └── dto/
+│   │               │   │       ├── UserRequestDto.java
+│   │               │   │       ├── UserResponseDto.java
+│   │               │   │       ├── RoleRequestDto.java
+│   │               │   │       └── RoleResponseDto.java
+│   │               │   ├── persistence/
+│   │               │   │   ├── entity/
+│   │               │   │   │   ├── UserJpaEntity.java
+│   │               │   │   │   └── RoleJpaEntity.java
+│   │               │   │   ├── repository/
+│   │               │   │   │   ├── UserJpaRepository.java
+│   │               │   │   │   └── RoleJpaRepository.java
+│   │               │   │   └── adapter/
+│   │               │   │       ├── UserRepositoryAdapter.java
+│   │               │   │       └── RoleRepositoryAdapter.java
+│   │               │   └── exception/
+│   │               │       ├── GlobalExceptionHandler.java
+│   │               │       ├── ResourceNotFoundException.java
+│   │               │       └── ErrorResponse.java
+│   │               └── config/
+│   │                   └── BeanConfig.java
+│   └── resources/
+│       ├── application.properties
+│       └── data.sql
+└── test/
+    └── java/
+        └── com/
+            └── example/
+                └── usermanagement/
+                    ├── application/
+                    │   └── service/
+                    │       ├── UserServiceTest.java
+                    │       └── RoleServiceTest.java
+                    └── infrastructure/
+                        └── controller/
+                            ├── UserControllerTest.java
+                            └── RoleControllerTest.java
 ```
 
 ## Setup Instructions
