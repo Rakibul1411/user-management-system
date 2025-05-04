@@ -64,7 +64,7 @@ src/
 │   │                   └── BeanConfig.java
 │   └── resources/
 │       ├── application.properties
-│       └── data.sql
+│       
 └── test/
     └── java/
         └── com/
