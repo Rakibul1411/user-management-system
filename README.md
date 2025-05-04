@@ -16,7 +16,7 @@ The application strictly follows Clean Architecture, separating concerns into Do
 - Java 17
 - Spring Boot 3.x
 - H2 Database (in-memory)
-- Maven/Gradle
+- Maven
 
 ## Project Structure
 
