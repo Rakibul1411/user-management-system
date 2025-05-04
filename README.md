@@ -85,7 +85,7 @@ src/
 ### Prerequisites
 
 - JDK 17+
-- Maven 3.6+ or Gradle 7+
+- Maven 3.6+
 - Git
 
 ### Clone Repository
